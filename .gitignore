@@ -1,0 +1,13 @@
+.DS_Store
+
+.env
+.vercel
+.env*
+
+.output
+
+/node_modules
+
+__pycache__/
+pyproject.toml
+uv.lock

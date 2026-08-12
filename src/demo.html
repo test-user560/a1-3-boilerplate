@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 서비스는 이렇게 움직입니다</title>
+    <link rel="stylesheet" href="./styles/demo.css" />
+    <script defer src="./js/demo.js"></script>
+  </head>
+  <body>
+    <main class="main">
+      <header class="main__header">
+        <h1 class="main__title">웹 서비스는 이렇게 움직입니다</h1>
+        <p class="main__description">
+          버튼을 누르면 화면의 숫자가 바뀌고, 서버에서 가져온 정보를 보여줄 수 있어요.
+          JavaScript로 웹페이지에 어떤 변화를 만들 수 있는지 직접 확인해보세요.
+        </p>
+
+      </header>
+
+      <!--
+        버튼을 누르면 숫자가 1씩 증가하고, 바뀐 숫자를 화면에 표시합니다.
+
+        AI에게 이렇게 요청해볼 수 있어요.
+        "사용자가 버튼을 클릭하면 숫자를 1씩 증가시키고 싶어.
+        증가한 숫자가 화면에 보이도록 만들어줘."
+      -->
+      <section class="example">
+        <div class="example__demo">
+          <div class="counter">
+            <p class="counter__value">0</p>
+            <button class="counter__button" type="button">숫자 1 올리기</button>
+          </div>
+        </div>
+        <div class="example__description">
+          <h2 class="example__title">JavaScript로 화면 변경하기</h2>
+          <p>JavaScript를 사용하면 사용자의 행동에 따라 HTML의 내용을 변경할 수 있습니다.</p>
+          <p>왼쪽 버튼을 클릭하면 JavaScript가 실행되고, 화면에 표시된 숫자가 1씩 증가합니다.</p>
+          <div class="flow">버튼 클릭 → JavaScript 실행 → HTML 변경</div>
+        </div>
+      </section>
+
+      <!--
+        버튼을 누르면 포켓몬 정보를 불러와 이름과 이미지를 화면에 표시합니다.
+        로딩 중에는 이미지와 이름 자리에 스켈레톤 UI를 표시합니다.
+
+        AI에게 이렇게 요청해볼 수 있어요.
+        "사용자가 버튼을 클릭하면 랜덤 포켓몬 정보를 가져오고 싶어.
+        불러온 포켓몬의 이름과 이미지가 화면에 보이고, 로딩 중에는 스켈레톤 UI가 보이도록 만들어줘."
+      -->
+      <section class="example">
+        <div class="example__demo">
+          <div class="pokemon">
+            <div class="pokemon__image-container">
+              <div
+                class="pokemon__loading pokemon__loading--image"
+                aria-label="포켓몬 정보 불러오는 중"
+                hidden
+              ></div>
+              <img class="pokemon__image" src="" alt="" hidden />
+            </div>
+            <p class="pokemon__name" aria-live="polite">버튼을 눌러 포켓몬을 만나보세요.</p>
+            <div class="pokemon__loading pokemon__loading--name" hidden></div>
+            <button class="pokemon__button" type="button">랜덤 포켓몬 불러오기</button>
+          </div>
+        </div>
+        <div class="example__description">
+          <h2 class="example__title">가져온 데이터를 보여주기</h2>
+          <p>JavaScript는 서버에 있는 정보를 가져와 내 웹페이지에 보여줄 수 있습니다.</p>
+          <p>왼쪽 버튼을 누르면 랜덤 포켓몬 한 마리의 이름과 이미지를 가져옵니다.</p>
+          <p><code>fetch()</code>는 서버에 정보를 요청할 때 사용하는 JavaScript 기능입니다.</p>
+          <div class="flow">버튼 클릭 → 데이터 가져오기 → 화면에 보여주기</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

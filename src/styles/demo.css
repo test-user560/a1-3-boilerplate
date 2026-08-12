@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f7f7f7;
+}
+button {
+  font: inherit;
+}
+.main {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+.main__header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+.main__title {
+  margin: 0;
+}
+.main__description {
+  margin-top: 12px;
+  color: #666;
+}
+.example {
+  display: flex;
+  gap: 48px;
+  padding: 48px 0;
+  border-top: 1px solid #ddd;
+}
+.example__demo,
+.example__description {
+  flex: 1;
+}
+.example__demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.example__title {
+  margin-top: 0;
+  font-size: 20px;
+}
+.example__description {
+  line-height: 1.6;
+}
+/*
+  카운터의 숫자와 버튼을 세로로 가운데 정렬합니다.
+
+  AI에게 이렇게 요청해볼 수 있어요.
+  "카운터를 화면에 보여줄 때 숫자와 버튼이 세로로 가운데에 모이게 하고 싶어.
+  숫자와 버튼을 중앙에 정렬하는 CSS를 작성해줘."
+*/
+.counter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.counter__value {
+  margin: 0;
+  font-size: 64px;
+}
+/*
+  포켓몬 정보가 들어올 자리와 로딩 스켈레톤 UI를 꾸밉니다.
+
+  AI에게 이렇게 요청해볼 수 있어요.
+  "포켓몬 정보를 불러오는 동안 이미지와 이름 자리에 로딩 상태를 보여주고 싶어.
+  회색 스켈레톤 애니메이션이 보이도록 CSS를 작성해줘."
+*/
+.pokemon {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+.pokemon__image-container {
+  display: grid;
+  place-items: center;
+  width: 120px;
+  height: 120px;
+  border: 1px dashed #222;
+}
+.pokemon__image {
+  width: 100%;
+  object-fit: contain;
+}
+.pokemon__name {
+  min-height: 24px;
+  margin: 0;
+  text-align: center;
+  text-transform: capitalize;
+}
+.pokemon__loading {
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e5e5e5 25%, #f2f2f2 50%, #e5e5e5 75%);
+  background-size: 200% 100%;
+  animation: loading 1.2s ease-in-out infinite;
+}
+.pokemon__loading--image {
+  width: 100%;
+  height: 100%;
+}
+.pokemon__loading--name {
+  width: 96px;
+  height: 24px;
+}
+@keyframes loading {
+  to {
+    background-position: -200% 0;
+  }
+}
+/*
+  클릭할 수 있는 버튼 모양과, 데이터를 불러오는 동안의 비활성 상태를 만듭니다.
+
+  AI에게 이렇게 요청해볼 수 있어요.
+  "사용자가 버튼에 마우스를 올리거나 데이터를 불러오는 동안 버튼 상태가 바뀌게 하고 싶어.
+  기본·마우스 오버·비활성 상태를 구분하는 CSS를 만들어줘."
+*/
+.counter__button,
+.pokemon__button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #fefefe;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+.counter__button:hover,
+.pokemon__button:hover {
+  background: #424040;
+}
+.pokemon__button:disabled {
+  cursor: wait;
+  background: #777;
+}
+.flow {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 6px;
+  background: #ececec;
+  font-size: 14px;
+}
+code {
+  padding: 2px 5px;
+  border-radius: 4px;
+  background: #ececec;
+}
+@media (max-width: 700px) {
+  .main {
+    padding: 40px 20px;
+  }
+  .example {
+    flex-direction: column;
+    gap: 24px;
+  }
+}

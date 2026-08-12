@@ -1,0 +1,22 @@
+{
+  "name": "a1-3-boilerplate",
+  "version": "1.0.0",
+  "description": "HTML, CSS, JavaScript가 함께 웹 서비스를 만드는 과정을 실습합니다.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/test-user560/a1-3-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/test-user560/a1-3-boilerplate/issues"
+  },
+  "homepage": "https://github.com/test-user560/a1-3-boilerplate#readme",
+  "devDependencies": {
+    "vercel": "^58.10.0"
+  }
+}
