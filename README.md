@@ -35,6 +35,10 @@ src/
 
 `vercel.json`은 브라우저 주소와 `src/` 안의 파일을 연결합니다. 예를 들어 `/api`로 요청하면 `src/api/index.py`가 실행됩니다.
 
+## 저장할 때 코드 정리하기
+
+코드를 저장할 때 들여쓰기와 줄바꿈을 자동으로 정리하고 싶다면 VS Code의 Extensions에서 `Oxc`를 검색해 **Oxc Formatter** 확장을 설치하세요. 이 프로젝트는 저장할 때 HTML, CSS, JavaScript, JSON 코드를 정리하도록 설정되어 있습니다.
+
 ## 실행하기
 
 ### 크롬으로 열기

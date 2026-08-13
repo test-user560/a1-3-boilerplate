@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/test-user560/a1-3-boilerplate#readme",
   "devDependencies": {
+    "oxfmt": "^0.63.0",
     "vercel": "^58.10.0"
   }
 }
