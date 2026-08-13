@@ -119,6 +119,62 @@ button {
   text-transform: capitalize;
 }
 
+.pokemon__name--error {
+  color: #b42318;
+  font-weight: bold;
+}
+
+.pokemon__controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.pokemon__select {
+  width: 200px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+}
+
+.pokemon__select:disabled {
+  cursor: wait;
+  background: #eee;
+}
+
+.pokemon__error-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  background: #b42318;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pokemon__error-button:hover {
+  background: #912018;
+}
+
+.pokemon__error-button svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  vertical-align: middle;
+}
+
+.pokemon__error-button:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
 .pokemon__loading {
   border-radius: 6px;
   background: linear-gradient(90deg, #e5e5e5 25%, #f2f2f2 50%, #e5e5e5 75%);

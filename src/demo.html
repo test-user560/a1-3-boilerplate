@@ -40,11 +40,11 @@
       </section>
 
       <!--
-        버튼을 누르면 포켓몬 정보를 불러와 이름과 이미지를 화면에 표시합니다.
+        고른 포켓몬을 불러와 이름과 이미지를 화면에 표시합니다.
         로딩 중에는 이미지와 이름 자리에 스켈레톤 UI를 표시합니다.
 
         AI에게 이렇게 요청해볼 수 있어요.
-        "사용자가 버튼을 클릭하면 랜덤 포켓몬 정보를 가져오고 싶어.
+        "사용자가 select에서 포켓몬을 고르면 바로 포켓몬 정보를 가져오고 싶어.
         불러온 포켓몬의 이름과 이미지가 화면에 보이고, 로딩 중에는 스켈레톤 UI가 보이도록 만들어줘."
       -->
       <section class="example">
@@ -58,17 +58,39 @@
               ></div>
               <img class="pokemon__image" src="" alt="" hidden />
             </div>
-            <p class="pokemon__name" aria-live="polite">버튼을 눌러 포켓몬을 만나보세요.</p>
+            <p class="pokemon__name" aria-live="polite">포켓몬을 골라보세요.</p>
             <div class="pokemon__loading pokemon__loading--name" hidden></div>
-            <button class="pokemon__button" type="button">랜덤 포켓몬 불러오기</button>
+            <div class="pokemon__controls">
+              <select class="pokemon__select" id="pokemon-select" aria-label="포켓몬 고르기">
+                <option value="" selected disabled>포켓몬을 골라보세요</option>
+                <option value="25">피카츄</option>
+                <option value="1">이상해씨</option>
+                <option value="4">파이리</option>
+                <option value="7">꼬부기</option>
+              </select>
+              <button
+                class="pokemon__error-button"
+                type="button"
+                aria-label="에러 상태 보기"
+                title="에러 상태 보기"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <path d="M7 19v-6a5 5 0 0 1 10 0v6" />
+                  <path d="M5 19h14" />
+                  <path d="M12 3v2M4.5 6.5l1.4 1.4M19.5 6.5l-1.4 1.4" />
+                  <path d="M7 19h10v2H7z" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <div class="example__description">
           <h2 class="example__title">가져온 데이터를 보여주기</h2>
           <p>JavaScript는 서버에 있는 정보를 가져와 내 웹페이지에 보여줄 수 있습니다.</p>
-          <p>왼쪽 버튼을 누르면 랜덤 포켓몬 한 마리의 이름과 이미지를 가져옵니다.</p>
+          <p>왼쪽에서 포켓몬을 고르면 이름과 이미지를 바로 가져옵니다.</p>
+          <p>옆의 사이렌 버튼을 누르면 오류가 났을 때의 화면도 확인할 수 있습니다.</p>
           <p><code>fetch()</code>는 서버에 정보를 요청할 때 사용하는 JavaScript 기능입니다.</p>
-          <div class="flow">버튼 클릭 → 데이터 가져오기 → 화면에 보여주기</div>
+          <div class="flow">포켓몬 선택 → 데이터 가져오기 → 화면에 보여주기</div>
         </div>
       </section>
     </main>
